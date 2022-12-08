@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo{
+        display: block;
+        color: rgb(170, 82, 47);
+        padding: 50px;
+        background-color: #474e5d;
+        color: white;
+        
+        font-size: 32px;
+        text-align: center;
+        }
+    body{
+
+
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+        padding: 16px;
+        background-color: rgb(16, 48, 76);
+    }
+    input[type=text]{
+        width: 50%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: block;
+        border: none;
+        background: #411717d7;
+      }
+
+
+    input[type=text]:focus {
+        background-color: rgba(24, 21, 21, 0.876);
+        outline: none;
+      }
+
+      hr {
+        border: 1px solid #6f682a;
+        margin-bottom: 25px;
+      }
+    
+      .registerbtn {
+        background-color: #153228;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+      
+      .registerbtn:hover {
+        opacity: 2;
+    }
+    a {
+        color: dodgerblue;
+      }
+      h3{
+        text-align: center;
+      }
+
+    #well{
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 80%;
+        background: #411717d7;
+      }
+    }
+
+      
+
+
+    </style>
+</head>
+<body>
+        <div class="logo"> <img src="IMG_8808.JPG" alt="These are images of me..." width="30px">KEJI</div>
+    
+    <form action="/action_page.php">
+        <div class="container">
+          <h1 style="text-align: center;">CONTACT US HERE</h1>
+          <p>Please fill in your details and state your issues.</p>
+          
+          
+          
+          
+            <label for="first"><b>FirstName</b></label>
+            <hr><input required type="text" id="first" placeholder="Firstname">
+        
+        
+            <hr><label for="hg"><b>LastName</b> </label>
+            <hr><input required type="text" id="hg" placeholder="Lastname">
+
+            <hr><label for="gh"><b>Middlename</b></label>
+            <hr><input type="text" placeholder="MiddleName" id="gh">
+           
+           
+            <hr><label for="email"><b>Email</b></label>
+            <hr><input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <hr><h3><label for="well">Leave a message for me</label></h3>
+            <hr><textarea name="" id="well" placeholder="What's your message for me? " rows="15"></textarea>
+            
+            
+            
+            
+        
+          <button type="submit" class="registerbtn">Send</button>
+        </div>
+        
+      </form>
+    
+</body>
+</html>

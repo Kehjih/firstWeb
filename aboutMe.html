@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+          *, *:before, *:after {
+            box-sizing: inherit;
+          }
+          
+          .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+          }
+          
+          .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+          }
+          
+          .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+          }
+          
+          .container {
+            padding: 0 16px;
+          }
+          
+          .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          
+          .title {
+            color: grey;
+          }
+          
+          .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: rgb(53, 29, 29);
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          .button:hover {
+            background-color: #555;
+          }
+          
+            .column {
+              width: 100%;
+              display: block;
+            }
+    </style>
+    
+</head>
+<body>
+    <div class="about-section">
+        <h1> About Me Page</h1>
+    </div>
+      <h2 style="text-align:center">Do you want to know me?</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="keji.jpg" alt="A picture of me" style="width:100%; height:20%">
+            <div class="container">
+              <h2>Awotedu Keji</h2>
+              <p class="title">Student</p>
+              <p>An enthusiast, aiming and working hard to be part of a goal-oriented
+                organization using my problem-solving, interpersonal, and leadership skills in
+                the appraisal and design optimization of business operations, capabilities, and
+                technologies of corporate and service establishments towards achieving
+                maximum productivity.</p>
+              
+              <p><button class="button"><a href="contact.html" style="color: white;">Contact Me</a> </button></p>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+</body>
+</html>

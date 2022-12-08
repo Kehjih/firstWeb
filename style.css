@@ -1,0 +1,43 @@
+body{
+
+    height: 100%;
+    width: 100%;
+    background-image: url("keji.jpg");
+    background-position: middle;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    /* background  shorthand */
+
+
+}
+
+.Drop{
+    background-color: blue;
+    color: aliceblue;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.Dm{
+    display: none;
+    position: absolute;
+    background-color: aquamarine;
+    min-width: 150px;
+
+}
+.Dm a {
+    color: black;
+    padding: 11px 15px;
+    text-decoration: none;
+    display: block;
+}
+.Dm a:hover {
+    background-color: rgb(238, 241, 243);
+}
+
+.dp:hover .Dm{
+    display: block;
+
+}
