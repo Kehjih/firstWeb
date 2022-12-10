@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  article {
+    margin: 5px, 5px;
+    padding: 5px;
+    background-color:rgb(10, 91, 91);
+    margin-bottom: 5px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6o7mN1pBFy43p_b_BBsYRdydD3W5zKua8TQ&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat-x: center;
+  }
+  #hk{
+    margin: 5px, 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  p{
+    color: #ccc;
+  }
+
+  aside {
+    width: 50%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: inline-end;
+    background-color: rgb(100, 152, 100);
+    background-image: url("https://www.aljazeera.com/wp-content/uploads/2022/11/SOR04640-1.jpg?resize=1170%2C780");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-x: center;
+  }
+  
+  h3{
+    color: antiquewhite;
+  }
+
+  li, a{
+    color: #ccc;
+  }
+   h1{
+    text-align: center;
+   }
+    
+    .navbar {
+
+        display: flex;
+        
+        align-items: center;
+        
+        justify-content: space-between;
+        
+        padding: 10px;
+        
+        background-color: teal;
+        
+        color: #fff;
+        
+        }
+        
+        .nav-links a {
+        
+        color: #fff;
+        
+        }
+        .logo {
+        
+        font-size: 20px;
+        
+        }
+        .menu {
+        
+        display: flex;
+        
+        gap: 1em;
+        
+        font-size: 15px;
+        
+        }
+        
+        .menu li:hover {
+        
+        background-color: #4c9e9e;
+        
+        border-radius: 5px;
+        
+        transition: 0.3s ease;
+        
+        }
+        
+        .menu li {
+        
+        padding: 5px 14px;
+        
+        }
+        
+        .services {
+        
+        position: relative;
+        
+        }
+        
+        .dropdown {
+        
+        background-color: rgb(1, 139, 139);
+        
+        padding: 1em 0;
+        
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        
+        display: none;
+        
+        border-radius: 8px;
+        
+        top: 35px;
+        
+        }
+        
+        .dropdown li + li {
+        
+        margin-top: 10px;
+        
+        }
+        
+        .dropdown li {
+        
+        padding: 0.5em 1em;
+        
+        width: 6em;
+        
+        text-align: center;
+        
+        }
+        
+        .dropdown li:hover {
+        
+        background-color: #658686;
+        
+        }
+        
+        .services:hover .dropdown {
+        
+        display: block;
+        
+        }
+
+        body {
+  
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: #000;
+            background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/2022_FIFA_World_Cup.svg/800px-2022_FIFA_World_Cup.svg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          
+          
+          input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+          
+          /* Set a style for all buttons */
+          button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+          }
+          
+          button:hover {
+            opacity: 0.8;
+          }
+          
+          /* Extra styles for the cancel button */
+          .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+          }
+          
+          /* Center the image and position the close button */
+          .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+          }
+          
+          img.avatar {
+            width: 40%;
+            border-radius: 50%;
+          }
+          
+          .container {
+            padding: 16px;
+          }
+          
+          span.psw {
+            float: right;
+            padding-top: 16px;
+          }
+          
+          /* The Modal (background) */
+          .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+          }
+          
+          /* Modal Content/Box */
+          .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+          }
+          
+          /* The Close Button (x) */
+          .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+          }
+          
+          .close:hover,
+          .close:focus {
+            color: red;
+            cursor: pointer;
+          }
+          
+          /* Add Zoom Animation */
+          .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+          }
+          
+          @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)} 
+            to {-webkit-transform: scale(1)}
+          }
+            
+          @keyframes animatezoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+          }
+          
+          /* Change styles for span and cancel button on extra small screens */
+          @media screen and (max-width: 300px) {
+            span.psw {
+               display: block;
+               float: none;
+            }
+            .cancelbtn {
+               width: 100%;
+            }
+          }
+          h2{
+            text-align: center;
+          }
+          .fifa{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(233, 235, 214);
+          }
+</style>
+
+</head>
+<body>
+  <nav class="navbar">
+
+    <div class="logo"> <img src="IMG_8808.JPG" alt="These are images of me..." width="20px">KEJI</div>
+
+        <ul class="nav-links">
+<label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+<div class="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="aboutMe.html">About Me</a></li>
+
+<li class="services">
+
+<a href="skills.html">Skills</a>
+
+<ul class="dropdown">
+
+<li><a href="skills.html">Work Experience </a></li>
+
+<li><a href="school.html">Education</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="contact.html">Contact</a></li>
+<li class="services"><a href="">Entertainments</a>
+    <ul class="dropdown">
+        <li><a href="semanticTags.html">my favorite music</a></li>
+        <li><a href="favVid.html">my videos</a></li>
+    </ul>
+
+</li>
+
+
+        </ul>
+    </div>
+  </nav>
+
+  
+
+<section>
+  <h1>Welcome To Project  T-Max</h1>
+  <h2 style="color: #888">T-Max SIGN UP Form</h2>
+
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">SIGN UP</button>
+
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://images.adsttc.com/media/images/61d5/7098/3e4b/31e0/5300/003f/large_jpg/FI.jpg?1641377939" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+    <h1>SIGN UP WITH US</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    <div class="container signin">
+    <p>Already have an account? <a href="TEST.html">Sign in</a>.</p>
+    </div>
+  </form>
+  </div>
+</section>
+
+<article id="jh">
+  <h1 class="fifa">2022 FIFA World Cup</h1>
+  <h3 class="fifa" style="margin-bottom: 0.5px;">Overview</h3><hr>
+  <div>
+  <p>The FIFA World Cup is a professional association football tournament held between national football teams. Organized by FIFA, the tournament, held every four years, was first played in 1930 in Uruguay, and has been contested by 32 teams since the 1998 event. The tournament is contested with eight round-robin groups followed by a knockout round for 16 teams. The defending champions are the French national football team, who defeated the Croatia national football team 4–2 in the 2018 FIFA World Cup final. The event is scheduled to take place under a reduced length, from 20 November to 18 December in Qatar. Being held in Qatar, it is the first World Cup tournament to be held in the Arab world. Spectators were not required to follow most COVID-19 pandemic restrictions such as social distancing, wearing masks, and negative tests <a href="https://en.wikipedia.org/wiki/2022_FIFA_World_Cup#Knockout_stage">(Wikipedia)</a>.</p>
+</div>
+</article>
+
+<article id="yh">
+  <h3> Portugal Vs Argentina 2014</h3>
+  <p>Portugal scored a late winner in injury time to beat World Cup finalists Argentina 1-0 at Old Trafford in Manchester, England. It was a match that had been billed as a battle between stars Cristiano Ronaldo and Lionel Messi yet lost all its luster as soon as the two were substituted at half-time.    
+
+    Fans were dying to see the two biggest stars in the sport do battle in colours other than those of Real Madrid and Barcelona. It was clear this match was a friendly affair when the two embraced in the tunnel before kick-off, via RMadridHome:
+    
+    The Albiceleste had the brighter start of the two teams, with Messi and Angel Di Maria linking up well in the attacking third. The Manchester United man came close to scoring after just seven minutes, hooking his effort inches wide of the post.</p>
+  <p>
+    Beto displayed excellent awareness inside his own box, snuffing out several solid crosses, but he had no answer for one of Messi's trademark darting runs. While the Portuguese stopper was beat, the Barcelona forward's shot just missed the target. Ronaldo produced his first moment of magic minutes later, isolating Jose Bosingwa with a clever back-heel. The Portugal forward couldn't make up his mind between crossing and shooting, however, and the resulting blast missed all of his team-mates and the goal completely.
+
+    Nani brought down Di Maria hard and the forward appeared to be in serious discomfort, to the agony of the Old Trafford crowd. He was able to continue after some treatment, showing no signs of lingering effects with a number of impressive runs down the sidelines.
+    
+    Facundo Roncaglia then produced a fine cross that was met by Javier Pastore, but Beto refused to be beaten. Portista was impressed with the stopper's performance:
+    
+    Ronaldo came close to opening the score after half an hour, turning Roncaglia around with a beautiful piece of skill before firing over the bar. Portugal started overcoming Argentina's hot start, with more possession in the centre of the pitch and a better feed toward the forwards.
+    
+    Argentina remained dangerous, however, and Messi wouldn't be outdone by his Real Madrid nemesis, curling a free-kick onto the top part of the crossbar. On the other end of the pitch, Ronaldo mistook Cristian Ansaldi for the ball, volleying the defender in the stomach.
+    
+    The two teams went into the dressing room after an entertaining first half that ultimately saw no goals.
+  </p>  
+</article>
+
+<aside>
+  <ul>
+    <h3>Read more here on each line-ups..</h3>
+    <b><li id="hk"><a href="https://en.wikipedia.org/wiki/Portugal_national_football_team">Portugal</a></li></b>
+    <b><li><a href="https://en.wikipedia.org/wiki/Argentina_national_football_team">Argentina</a></li></b>
+  </ul>
+
+</aside>
+<article>
+  <h3>Portugal Vs Argentina: Possible in 2022?</h3>
+  <p>Four teams from Groups A and B of the FIFA World Cup 2022 have already qualified for the Round 16, including the Netherlands, Senegal, England, and the United States. However, fans from all over the world are hopeful that the Qatar World Cup would feature a showdown between Lionel Messi and Cristiano Ronaldo.</p>
+  <p>Portugal, led by Cristiano Ronaldo, has already clinched a spot in the Round of 16, and they will play South Korea in their last group game to establish the Group H standings. The five-time winner of the Ballon d'Or initiated the scoring against Ghana, and Bruno Fernandes of Manchester United scored twice against Uruguay.</p>
+  <p>Whereas, Argentina lost 1-2 to Saudi Arabia in their opening match before defeating Mexico 2-0 in the second. Argentina's captain Lionel Messi scored against Mexico and Saudi Arabia while Enzo Fernandez ended up scoring the game-winning goal against Mexico.
+  </p>
+
+  <p>Argentina is currently ranked second in Group C with three points and a one-goal differential, while Portugal is at first place in Group H with six points and a three-goal differential. The FIFA World Cup 2022 semifinal or championship match between Portugal and Argentina is a possibility, given the way the knockout stages draw was made.</p>
+  <p>As per Portugal's current group standings, they can qualify to play against Argentina in the semifinals. Ronaldo and Messi might face off in the championship game if Portugal and Argentina place first and second in their respective groups.</p>
+  <p>
+    <ol>
+      <li>
+        
+        <dt><b>What do Portugal's group standings qualify?</b> </dt>
+        <dd>Portugal's current group standings qualify them to play Argentina in the semifinals.</dd>
+        
+      </li>
+      <li>
+        <dt><b>How did Argentina lose to Saudi Arabia?</b> </dt>
+        <dd>Argentina lost 1-2 to Saudi Arabia in their opening match.</dd>
+      </li>
+    </ol>
+  </p>
+</article>
+
+
+</body>
+</html>
